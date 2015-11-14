@@ -1,11 +1,11 @@
 Name:       uchardet
 Version:    0.0.1
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    Universal charset detection
 
 License:    MPLv1.1
-URL:        http://code.google.com/p/uchardet/
-Source0:    http://uchardet.googlecode.com/files/%{name}-%{version}.tar.gz
+URL:        https://github.com/BYVoid/uchardet
+Source0:    https://github.com/BYVoid/uchardet/archive/master.tar.gz
 
 BuildRequires: cmake
 
@@ -24,7 +24,7 @@ Requires: %{name}%{?_isa} = %{version}-%{release}
 Header files and Libraries for the package uchardet.
 
 %prep
-%setup -q
+%setup -q -n %{name}-master
 
 %build
 %cmake
@@ -53,5 +53,8 @@ mv %{buildroot}/usr/lib %{buildroot}%{_libdir}
 %{_libdir}/pkgconfig/%{name}.pc
 
 %changelog
+* Sat Nov 14 2015 Vasiliy N. Glazov <vascom2@gmail.com> - 0.0.1-2
+- Rebuild
+
 * Sun May 12 2013 Huaren Zhong <huaren.zhong@gmail.com> - 0.0.1
 - Rebuild for Fedora
