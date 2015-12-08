@@ -1,5 +1,5 @@
 Name:       uchardet
-Version:    0.0.4
+Version:    0.0.5
 Release:    1%{?dist}
 Summary:    Universal charset detection
 
@@ -53,6 +53,9 @@ mv %{buildroot}/usr/lib %{buildroot}%{_libdir}
 %{_libdir}/pkgconfig/%{name}.pc
 
 %changelog
+* Tue Dec 08 2015 Vasiliy N. Glazov <vascom2@gmail.com> - 0.0.5-1
+- Update to 0.0.5
+
 * Fri Dec 04 2015 Vasiliy N. Glazov <vascom2@gmail.com> - 0.0.4-1
 - Update to 0.0.4
 
