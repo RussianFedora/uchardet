@@ -27,14 +27,11 @@ Header files and Libraries for the package uchardet.
 %setup -q
 
 %build
-%cmake
+%cmake -DCMAKE_INSTALL_LIBDIR=%{_libdir} .
 make %{?_smp_mflags}
 
 %install
 %make_install
-%ifarch x86_64
-mv %{buildroot}/usr/lib %{buildroot}%{_libdir}
-%endif
 
 %post -p /sbin/ldconfig
 
